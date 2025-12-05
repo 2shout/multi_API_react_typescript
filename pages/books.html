@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Поиск книг</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>📚 Поиск книг</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="crypto.html">Криптовалюты</a></li>
+            <li><a href="books.html">Книги</a></li>
+            <li><a href="currency.html">Валюты</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="api-section">
+          <h2>Найдите книги по названию или автору</h2>
+          <form id="booksForm">
+            <div class="form-group">
+              <label for="searchQuery">Поисковый запрос:</label>
+              <input
+                type="text"
+                id="searchQuery"
+                placeholder="Название книги, автор или ключевые слова"
+                required
+              />
+            </div>
+            <button type="submit" class="submit-btn">Найти книги</button>
+          </form>
+          <div class="popular-queries">
+            <p>
+              🔍 Попробуйте:
+              <span class="query-tag" data-query="javascript">javascript</span>
+              <span class="query-tag" data-query="harry potter"
+                >harry potter</span
+              >
+              <span class="query-tag" data-query="stephen king"
+                >stephen king</span
+              >
+            </p>
+          </div>
+          <div id="booksResults"></div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../src/js/books.js"></script>
+  </body>
+</html>

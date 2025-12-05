@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "emmet.includeLanguages": {
+    "javascript": "html"
+  },
+  "terminal.integrated.defaultLocation": "editor",
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true
+}

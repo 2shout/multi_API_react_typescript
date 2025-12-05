@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Криптовалюты</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>₿ Криптовалюты</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="crypto.html">Криптовалюты</a></li>
+            <li><a href="books.html">Книги</a></li>
+            <li><a href="currency.html">Валюты</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="api-section">
+          <h2>Курсы криптовалют</h2>
+          <div class="crypto-controls">
+            <button id="loadTopCrypto" class="submit-btn">
+              Показать топ криптовалюты
+            </button>
+            <div class="search-group">
+              <input
+                type="text"
+                id="cryptoSearch"
+                placeholder="Поиск криптовалюты (bitcoin, ethereum...)"
+              />
+              <button id="searchCrypto" class="submit-btn">Найти</button>
+            </div>
+          </div>
+          <div id="cryptoResults"></div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../src/js/crypto.js"></script>
+  </body>
+</html>

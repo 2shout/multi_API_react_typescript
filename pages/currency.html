@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Курсы валют</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>💱 Конвертер валют</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="crypto.html">Криптовалюты</a></li>
+            <li><a href="books.html">Книги</a></li>
+            <li><a href="currency.html">Валюты</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="api-section">
+          <h2>Конвертация валют</h2>
+          <form id="currencyForm">
+            <div class="form-group">
+              <label for="amount">Сумма:</label>
+              <input
+                type="number"
+                id="amount"
+                value="100"
+                min="0.01"
+                step="0.01"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="fromCurrency">Из валюты:</label>
+              <select id="fromCurrency" required>
+                <option value="USD">USD - Доллар США</option>
+                <option value="EUR">EUR - Евро</option>
+                <option value="RUB" selected>RUB - Российский рубль</option>
+                <option value="GBP">GBP - Фунт стерлингов</option>
+                <option value="JPY">JPY - Японская иена</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="toCurrency">В валюту:</label>
+              <select id="toCurrency" required>
+                <option value="USD" selected>USD - Доллар США</option>
+                <option value="EUR">EUR - Евро</option>
+                <option value="RUB">RUB - Российский рубль</option>
+                <option value="GBP">GBP - Фунт стерлингов</option>
+                <option value="JPY">JPY - Японская иена</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">Конвертировать</button>
+          </form>
+
+          <div class="quick-conversions">
+            <h4>🚀 Быстрые конвертации:</h4>
+            <div class="quick-buttons">
+              <button
+                type="button"
+                class="quick-btn"
+                data-from="USD"
+                data-to="EUR"
+              >
+                USD → EUR
+              </button>
+              <button
+                type="button"
+                class="quick-btn"
+                data-from="EUR"
+                data-to="USD"
+              >
+                EUR → USD
+              </button>
+              <button
+                type="button"
+                class="quick-btn"
+                data-from="RUB"
+                data-to="USD"
+              >
+                RUB → USD
+              </button>
+              <button
+                type="button"
+                class="quick-btn"
+                data-from="USD"
+                data-to="RUB"
+              >
+                USD → RUB
+              </button>
+            </div>
+          </div>
+
+          <div id="currencyResults"></div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../src/js/currency.js"></script>
+  </body>
+</html>
